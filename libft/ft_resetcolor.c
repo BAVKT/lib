@@ -6,13 +6,13 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/19 16:36:38 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/01/19 16:37:04 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/19 17:54:59 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_resetcolor()
+void	ft_resetcolor(void)
 {
 	ft_putstr(RESET);
 }
