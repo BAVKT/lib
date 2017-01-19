@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 05:02:21 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/02 02:59:29 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/07 16:23:06 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char		*ft_itoa(int n)
 		buf[i++] = '0';
 	if (n < 0)
 		buf[i++] = '-';
-	if (!(s = (char *)malloc(sizeof(char) * (i + 1))))
+	if (i + 1 <= 0 || !(s = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	s[i] = '\0';
 	while (--i >= 0)

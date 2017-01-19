@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 03:03:51 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/05 16:24:21 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/05 11:32:42 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,7 @@ char		*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	nb = ft_scount(s);
-	s2 = (char *)malloc(sizeof(char) * (nb + 1));
-	if (!s2)
+	if (nb + 1 <= 0 || !(s2 = (char *)malloc(sizeof(char) * (nb + 1))))
 		return (NULL);
 	while (s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;

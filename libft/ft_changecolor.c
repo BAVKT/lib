@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_doop.c                                          :+:      :+:    :+:   */
+/*   ft_changecolor.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/14 11:50:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/22 12:46:13 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/01/19 16:32:43 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/01/19 16:35:26 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cal(int a, int b, char c)
+/*
+**	Permet de changer la couleur jusqu'a ce qu'on face un ft_resetcolor().
+*/
+
+void	ft_changecolor(char *color)
 {
-	if (c == '-')
-		return (a - b);
-	else if (c == '+')
-		return (a + b);
-	else if (c == '*')
-		return (a * b);
-	else if (c == '/')
-		return (a / b);
-	else if (c == '%')
-		return (a % b);
-	else
-		return (0);
+	ft_putstr(color);
 }

@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 03:47:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/21 22:49:27 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/07 16:29:12 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static char		*ft_cp(char const *s, char c, int *i)
 	char	*s2;
 
 	a = 0;
-	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
-	if (!s2)
+	if (ft_strlen(s) + 1 <= 0 ||
+		!(s2 = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1)))
 		return (NULL);
 	while (s[*i] != c && s[*i])
 	{
@@ -63,7 +63,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb = ft_count(s, c);
-	if (!(s2 = (char **)malloc(sizeof(char *) * (nb + 1))))
+	if (nb + 1 <= 0 || !(s2 = (char **)malloc(sizeof(char *) * (nb + 1))))
 		return (NULL);
 	while (s[i])
 	{

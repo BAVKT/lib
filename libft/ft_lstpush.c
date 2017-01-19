@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstpush.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/19 00:37:57 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/01/09 16:08:14 by vmercadi         ###   ########.fr       */
+/*   Created: 2016/12/14 11:50:37 by vmercadi          #+#    #+#             */
+/*   Updated: 2016/12/22 12:46:13 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** p1 = La taille à allouer
-** Alloue et retourne une chaine de caractère “fraiche” terminée par un ’\0’. \
-** Chaque caractère de la chaine est initialisé à ’\0’. NULL si fail.
-*/
-
-char	*ft_strnew(size_t size)
+void	ft_lstpush(t_list lst, t_list new)
 {
-	char	*s;
-
-	if (!(s = (char *)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	ft_memset(s, '\0', size + 1);
-	return (s);
+	while (lst->next)
+		lst = lst->new;
+	lst->next = new;
 }

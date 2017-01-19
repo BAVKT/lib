@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 02:44:25 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/04 21:46:18 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/09 16:08:56 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1 || !s2)
+	if (!s1 || !s2 || (ft_strlen(s1) + ft_strlen(s2) + 1) <= 0)
 		return (NULL);
 	s3 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!s3)

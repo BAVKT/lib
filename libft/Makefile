@@ -6,7 +6,7 @@
 #    By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/01/03 15:48:39 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/01/04 22:10:40 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,22 +31,13 @@ SRC = 	ft_isalpha.c 	ft_isprint.c 	ft_memcmp.c		\
 		ft_putnbr_fd.c ft_putstr_fd.c 	ft_lstnew.c		\
 		ft_strcmp.c 	ft_strtrim.c 	ft_lstdelone.c	\
 		ft_lstadd.c 	ft_lstdel.c 	ft_lstiter.c	\
-		ft_lstmap.c    
+		ft_lstmap.c    	ft_range.c 		ft_putstrcolor.c \
+		ft_putnbrcolor.c ft_changecolor.c ft_resetcolor.c \
+		ft_changebkcolor.c  
 
-SRCO =	ft_isalpha.o ft_isprint.o ft_memcmp.o ft_atoi.o ft_strlcat.o		\
-		ft_strncmp.o ft_toupper.o ft_bzero.o ft_isascii.o ft_memcpy.o		\
-		ft_strcat.o	ft_strcpy.o ft_strncpy.o ft_strstr.o ft_isalnum.o		\
-		ft_memchr.o	ft_memmove.o ft_strchr.o ft_strncat.o ft_strnstr.o		\
-		ft_tolower.o ft_itoa.o ft_strdel.o ft_putendl.o ft_strjoin.o		\
-		ft_strnew.o ft_memalloc.o ft_putstr.o ft_strequ.o ft_strmap.o		\
-		ft_memdel.o	ft_striter.o ft_memccpy.o ft_strmapi.o ft_strsub.o		\
-		ft_putchar.o ft_strclr.o ft_striteri.o ft_strnequ.o ft_memset.o		\
-		ft_strrchr.o ft_strlen.o ft_isdigit.o ft_strdup.o ft_putendl_fd.o	\
-		ft_strsplit.o ft_putnbr.o ft_putchar_fd.o ft_putnbr_fd.o			\
-		ft_putstr_fd.o ft_lstnew.o ft_strcmp.o ft_strtrim.o ft_lstdelone.o	\
-		ft_lstadd.o ft_lstdel.o ft_lstiter.o ft_lstmap.o
+SRCO = $(SRC:%.c=%.o)
 
-LINK = $(%.c=%.o)
+.PHONY: all re clean fclean
 
 all: $(NAME) 
 
@@ -58,6 +49,6 @@ clean:
 	rm -rf $(SRCO)
 
 fclean: clean
-	rm -rf $(NAME) $(SRCO)
+	rm -rf $(NAME) 
 
 re: fclean all

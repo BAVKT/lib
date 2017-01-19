@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 03:09:45 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/11/10 04:54:56 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/05 11:27:51 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int		*ft_range(int min, int max)
 		tab = NULL;
 		return (tab);
 	}
-	tab = (int *)malloc(sizeof(*tab) * lenght);
+	if (lenght <= 0 || !(tab = (int *)malloc(sizeof(int) * lenght)))
+		return (NULL);
 	while (i < lenght)
 	{
 		tab[i] = min;

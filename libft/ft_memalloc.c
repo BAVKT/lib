@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 00:13:02 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/11/26 13:01:36 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/05 11:29:00 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	*ft_memalloc(size_t n)
 {
-	char	*s;
+	void	*s;
 
-	s = (char *)malloc(sizeof(n + 1));
-	if (s == NULL || n > 2147483647 || n <= 0)
+	if (!(s = (void *)malloc(n)))
 		return (NULL);
 	ft_memset(s, '\0', n);
-	s[n + 1] = '\0';
-	return ((void *)s);
+	return (s);
 }
