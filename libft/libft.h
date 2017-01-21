@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 13:46:11 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/01/19 17:55:27 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/21 14:43:38 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void				ft_swap(void *a, void *b);
 void				ft_memdel(void **ap);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
+void				ft_putcharendl(char c);
 void				ft_putnbrendl(int i);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
