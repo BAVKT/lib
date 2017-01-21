@@ -6,7 +6,7 @@
 /*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 14:41:47 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/01/21 14:42:52 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/01/21 15:33:30 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putcharendl(char c)
 {
-	ft_putchar(char c);
+	ft_putchar(c);
 	ft_putchar('\n');
 }
