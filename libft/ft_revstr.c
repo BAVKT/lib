@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:08:49 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/04/07 16:09:06 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/06/01 17:07:48 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 /*
 ** Permet d'inverser les caracteres d'une chaine 1 a 1
 */
-char 	*ft_revstr(char *str)
+
+char	*ft_revstr(char *str)
 {
 	char	*tmp;
 	int		i;

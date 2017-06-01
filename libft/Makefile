@@ -6,7 +6,7 @@
 #    By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/01/21 15:33:43 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/05/31 15:14:17 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRC = 	ft_isalpha.c 	ft_isprint.c 	ft_memcmp.c		\
 		ft_lstadd.c 	ft_lstdel.c 	ft_lstiter.c	\
 		ft_lstmap.c    	ft_range.c 		ft_putstrcolor.c \
 		ft_putnbrcolor.c ft_changecolor.c ft_resetcolor.c \
-		ft_putnbrendl.c ft_putcharendl.c
+		ft_putnbrendl.c ft_putcharendl.c ft_file_to_str.c \
+		ft_sqrt.c 
 
 SRCO = $(SRC:%.c=%.o)
 

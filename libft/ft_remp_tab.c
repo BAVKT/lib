@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:21:55 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/04/07 16:25:09 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/06/01 17:12:11 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 /*
 ** Rempli un tableau avec la chaine passé en param.
-** Si la chaine est trop courte elle boucle dans le tableau. 
+** Si la chaine est trop courte elle boucle dans le tableau.
 */
+
 char	**ft_remp_tab(char **tab, int size, char *str)
 {
-	int 	i;
+	int		i;
 	int		j;
 	int		k;
 
@@ -26,7 +27,7 @@ char	**ft_remp_tab(char **tab, int size, char *str)
 	j = 0;
 	k = 0;
 	if (!str)
-		return 
+		return (NULL);
 	while (i < size)
 	{
 		j = 0;
@@ -34,7 +35,7 @@ char	**ft_remp_tab(char **tab, int size, char *str)
 		{
 			if (k >= ft_strlen(str) - 1)
 				k = 0;
-			tab[i][j] = str[k]; 
+			tab[i][j] = str[k];
 			j++;
 			k++;
 		}

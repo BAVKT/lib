@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab.c                                     :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/07 16:13:29 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/06/01 17:07:54 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/05/31 15:18:30 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/05/31 15:34:39 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Affiche un tableau
-*/
-
-void	ft_print_tab(char **str, int size)
+int		ft_sqrt(int nb)
 {
-	int i;
-	int j;
+	int	prime;
+	int	i;
 
+	prime = 1;
 	i = 0;
-	while (i < size)
+	while (prime < nb)
 	{
-		j = 0;
-		while (j < size)
-		{
-			ft_putchar(str[i][j]);
-			j++;
-		}
 		i++;
-		ft_putchar('\n');
+		prime = i * i;
 	}
+	return (i);
 }

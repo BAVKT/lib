@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 13:46:11 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/04/07 16:25:03 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/06/01 17:08:35 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+
 /*
 ** BOLD 	= En gras (changer la valeur mise a 1 pour plus épais)
 ** RESET 	= Remet en blanc
@@ -93,8 +94,8 @@ void				ft_putstrcolor(char *str, char *color);
 void				ft_putnbrcolor(int i, char *color);
 void				ft_changecolor(char *color);
 void				ft_resetcolor();
-void 				ft_rot(int nb, char *str, int start, int end);
-void 				ft_print_tab(char **str, int size);
+void				ft_rot(int nb, char *str, int start, int end);
+void				ft_print_tab(char **str, int size);
 void				*ft_memalloc(size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -102,7 +103,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 char				*ft_file_to_str(char *av);
-char 				*ft_revstr(char *str);
+char				*ft_revstr(char *str);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *str, int c);
 char				*ft_strcpy(char *dst, const char *src);
@@ -121,7 +122,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				**ft_init_tab(int size);
-char 				**ft_cp_tab(char **tab, char **dst, int len);
+char				**ft_cp_tab(char **tab, char **dst, int len);
 char				**ft_remp_tab(char **tab, int size, char *str);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
