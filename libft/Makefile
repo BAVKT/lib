@@ -6,7 +6,7 @@
 #    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/07/27 15:24:43 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/07/27 17:10:35 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ SRCO = $(SRC:%.c=%.o)
 
 all: $(NAME) 
 
-$(NAME):
+$(NAME):$(SRCO)
 	@gcc -c -Wall -Wextra -Werror $(SRC)
 	@ar rc $(NAME) $(SRCO)
 
@@ -52,6 +52,8 @@ clean:
 	@rm -rf $(SRCO)
 
 fclean: clean
-	@rm -rf $(NAME) 
+	@rm -rf $(NAME)
+	 
+ultra: all clean
 
 re: fclean all
