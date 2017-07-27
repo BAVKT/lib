@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/05/31 15:14:17 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/07/27 15:24:43 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRC = 	ft_isalpha.c 	ft_isprint.c 	ft_memcmp.c		\
 		ft_lstmap.c    	ft_range.c 		ft_putstrcolor.c \
 		ft_putnbrcolor.c ft_changecolor.c ft_resetcolor.c \
 		ft_putnbrendl.c ft_putcharendl.c ft_file_to_str.c \
-		ft_sqrt.c 
+		ft_sqrt.c		ft_print_tab.c  ft_cp_tab.c		\
+		ft_putendlcolor.c swap_tab.c ft_strjoin_free.c \
+		get_next_line.c
 
 SRCO = $(SRC:%.c=%.o)
 
@@ -43,13 +45,13 @@ SRCO = $(SRC:%.c=%.o)
 all: $(NAME) 
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC)
-	ar rc $(NAME) $(SRCO)
+	@gcc -c -Wall -Wextra -Werror $(SRC)
+	@ar rc $(NAME) $(SRCO)
 
 clean:
-	rm -rf $(SRCO)
+	@rm -rf $(SRCO)
 
 fclean: clean
-	rm -rf $(NAME) 
+	@rm -rf $(NAME) 
 
 re: fclean all

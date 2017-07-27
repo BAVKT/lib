@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cp_tab.c                                        :+:      :+:    :+:   */
+/*   ft_putendlcolor.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/07 16:11:32 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/25 21:49:15 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/07/26 19:16:23 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/07/27 15:29:30 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Pour copier un tableau dans un autre
-*/
-
-char	**ft_cp_tab(char **dst, char **src, int len)
+void	ft_putendlcolor(char *str, char *color)
 {
-	int		i;
-
-	i = 0;
-	while (i < len)
-	{
-		dst[i] = ft_strdup(src[i]);
-		i++;
-	}
-	dst[i] = NULL;
-	return (dst);
+	ft_putstr(color);
+	ft_putstr(str);
+	ft_putchar('\n');
+	ft_putstr(RESET);
 }

@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cp_tab.c                                        :+:      :+:    :+:   */
+/*   swap_tab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/07 16:11:32 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/25 21:49:15 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/07/27 15:03:40 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/07/27 15:04:49 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*
-** Pour copier un tableau dans un autre
+** Swap 2 char* in a char **
 */
 
-char	**ft_cp_tab(char **dst, char **src, int len)
+void	swap_tab(char **a, char **b)
 {
-	int		i;
+	char	*c;
 
-	i = 0;
-	while (i < len)
-	{
-		dst[i] = ft_strdup(src[i]);
-		i++;
-	}
-	dst[i] = NULL;
-	return (dst);
+	c = *a;
+	*a = *b;
+	*b = c;
 }

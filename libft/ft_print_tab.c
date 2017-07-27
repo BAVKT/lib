@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:13:29 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/06/01 17:07:54 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/07/07 06:00:09 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,11 @@
 ** Affiche un tableau
 */
 
-void	ft_print_tab(char **str, int size)
+void	ft_print_tab(char **str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	while (i < size)
-	{
-		j = 0;
-		while (j < size)
-		{
-			ft_putchar(str[i][j]);
-			j++;
-		}
-		i++;
-		ft_putchar('\n');
-	}
+	while (str[i])
+		ft_putendl(str[i++]);
 }

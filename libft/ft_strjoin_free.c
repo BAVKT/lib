@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cp_tab.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/07 16:11:32 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/25 21:49:15 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/07/27 15:18:31 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/07/27 15:29:19 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Pour copier un tableau dans un autre
+** strjoin qui leaks pas
 */
 
-char	**ft_cp_tab(char **dst, char **src, int len)
+char	*ft_strjoin_free(char *dst, char *src)
 {
-	int		i;
+	char	*tmp;
 
-	i = 0;
-	while (i < len)
-	{
-		dst[i] = ft_strdup(src[i]);
-		i++;
-	}
-	dst[i] = NULL;
+	if (!src)
+		return (dst);
+	if (!dst)
+		return (src);
+	tmp = ft_strdup(dst);
+	ft_strdel(&dst);
+	dst = ft_strjoin(tmp, src);
+	ft_strdel(&tmp);
 	return (dst);
 }
