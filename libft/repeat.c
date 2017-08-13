@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   repeat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 01:52:59 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/08 15:50:00 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/08/13 15:21:23 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/08/13 15:23:27 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** trouve la derniere occurence de c dans la chaine.
+** Return a str with a repetition of n char c
 */
 
-char	*ft_strrchr(const char *str, int c)
+char	*repeat(int n, char c)
 {
-	int		i;
-	char	*s;
+	char *str;
 
-	s = (char *)str;
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return (&s[i]);
-		i--;
-	}
-	return (NULL);
+	str = ft_strnew(n);
+	while (n >= 0)
+		str[n--] = c;
+	return (str);
 }

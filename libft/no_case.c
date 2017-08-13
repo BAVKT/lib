@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   no_case.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 01:52:59 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/08 15:50:00 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/08/13 15:20:43 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/08/13 15:49:13 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** trouve la derniere occurence de c dans la chaine.
+** Convert normal strings to no-maj string
 */
 
-char	*ft_strrchr(const char *str, int c)
+char	*no_case(char *str)
 {
+	char	*tmp;
 	int		i;
-	char	*s;
 
-	s = (char *)str;
 	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+	tmp = ft_strnew(ft_strlen(str));
+	while (str[i])
 	{
-		if (s[i] == c)
-			return (&s[i]);
-		i--;
+		if (is_upper(str[i]))
+			tmp[i] = str[i] + 32;
+		else
+			tmp[i] = str[i];
+		i++;
 	}
-	return (NULL);
+	tmp[i] = '\0';
+	return (tmp);
 }

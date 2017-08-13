@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cp_tab.c                                        :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/07 16:11:32 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/27 18:53:31 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/08/13 15:19:20 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/08/13 15:50:28 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*
-** Pour copier un tableau dans un autre
+**	Check if the char is uppercase
 */
 
-char	**ft_cp_tab(char **dst, char **src)
+int		is_upper(char s)
 {
-	int		i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = ft_strdup(src[i]);
-		i++;
-	}
-	dst[i] = NULL;
-	return (dst);
+	if (s >= 65 && s <= 90)
+		return (1);
+	return (0);
 }

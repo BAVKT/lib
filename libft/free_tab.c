@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   free_tab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmercadi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 01:52:59 by vmercadi          #+#    #+#             */
-/*   Updated: 2016/12/08 15:50:00 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/08/13 15:30:43 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/08/13 15:51:01 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** trouve la derniere occurence de c dans la chaine.
+** Free a tab
 */
 
-char	*ft_strrchr(const char *str, int c)
+void	free_tab(void **tab)
 {
-	int		i;
-	char	*s;
+	int	i;
 
-	s = (char *)str;
 	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return (&s[i]);
-		i--;
-	}
-	return (NULL);
+	while (tab[i])
+		ft_strdel(&tab[i++]);
+	ft_memdel((void**)tab);
 }

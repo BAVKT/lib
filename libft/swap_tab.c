@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/27 15:03:40 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/27 15:04:49 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/08/13 15:24:59 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/08/13 15:25:35 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Swap 2 char* in a char **
+** Swap 2 tab blocks
 */
 
-void	swap_tab(char **a, char **b)
+void	swap_tab(void **a, void **b)
 {
-	char	*c;
+	void	*c;
 
 	c = *a;
 	*a = *b;
