@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 13:46:11 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/13 15:49:52 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/13 16:26:04 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int					ft_isprint(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					is_upper(char s);
-char				*ft_repeat(int n, char c);
+char				*repeat(int n, char c);
 
 /*
 ** List
