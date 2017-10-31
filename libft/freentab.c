@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_tab.c                                         :+:      :+:    :+:   */
+/*   freentab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 15:30:43 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/10/25 17:14:13 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/10/25 17:11:00 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/10/25 17:18:35 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Free a tab
-*/
-
-void	free_tab(void **tab)
+void	freentab(void **tab, int n)
 {
-	char	**tmp;
+	void	**tmp;
 
-	tmp = (char **)tab;
-	while (*tmp)
+	if (n < 0 || !tab)
+		return ;
+	tmp = (void **)tab;
+	while (n--)
 	{
 		if (tmp)
-			ft_strdel(tmp);
+			ft_memdel(tmp);
 		tmp++;
 	}
 	free(tab);

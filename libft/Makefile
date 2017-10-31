@@ -6,7 +6,7 @@
 #    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/08/13 16:12:05 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/10/25 17:16:05 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ SRC = 	ft_isalpha.c 		ft_isprint.c 		ft_memcmp.c			\
 		ft_putendlcolor.c 	ft_strjoin_free.c 	ft_putcharendl.c 	\
 		get_next_line.c		ft_revstr.c 		ft_isupper.c 		\
 		no_case.c 			repeat.c 			tab_len.c			\
-		swap_tab.c 			free_tab.c								\
+		swap_tab.c 			free_tab.c			freentab.c			\
 
 SRCO = $(SRC:%.c=%.o)
 
